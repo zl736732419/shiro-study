@@ -20,7 +20,8 @@
   	<param-name>shiroConfigLocations</param-name>
 <!--   	<param-value>classpath:shiro-web.ini</param-value> -->
   	<!-- <param-value>classpath:shiro-basicfilterform.ini</param-value> -->
-  	<param-value>classpath:shiro-formfilterlogin.ini</param-value>
+  	<!-- <param-value>classpath:shiro-formfilterlogin.ini</param-value> -->
+  	<param-value>classpath:shiro-myaccessfilter.ini</param-value>
   </context-param>
   
   <filter>
