@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://shiro.apache.org/tags" prefix="shiro" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="zheng" %>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -23,6 +25,31 @@
 </head>
 <body>
 	<h1 style="color:green">登录成功</h1>
+	<shiro:guest>
+		hello guest, more to <a href="${pageContext.request.contextPath }/login">login</a>
+	</shiro:guest>
+	
+	<zheng:hasAllPermissions name="admin,user">
+		<shiro:principal/>拥有权限[admin,user]
+	</zheng:hasAllPermissions>
+	
+	<shiro:user>
+		用户<shiro:principal/>欢迎登录!
+	</shiro:user>
+	
+	<shiro:authenticated>
+		用户<shiro:principal/> 已通过身份认证!
+	</shiro:authenticated>
+	
+	<shiro:notAuthenticated>
+		用户<shiro:principal/>还没有经过认证!
+	</shiro:notAuthenticated>
+	
+	<shiro:hasRole name="admin">
+		用户<shiro:principal/> 拥有admin访问权限!
+	</shiro:hasRole>
+	
+	
 	
 	<p>欢迎 <span>${subject.principal}!</span><a href="${pageContext.request.contextPath }/logout">退出</a></p>
 
