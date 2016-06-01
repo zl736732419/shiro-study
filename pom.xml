@@ -16,12 +16,19 @@
 		    <version>1.2.2</version>  
 		</dependency>
 
+		<dependency>
+			<groupId>com.zheng</groupId>
+			<artifactId>shiro-se</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 	<parent>
 		<groupId>com.zheng</groupId>
 		<artifactId>shiro-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	
 	<build>
 		<finalName>shiro-study</finalName>
 	</build>
