@@ -16,7 +16,7 @@ import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 
-@WebServlet(name="loginSevlet", urlPatterns="/login")
+//@WebServlet(name="loginSevlet", urlPatterns="/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
